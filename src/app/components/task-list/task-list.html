@@ -1,0 +1,38 @@
+<h2>Task List</h2>
+
+<table border="1">
+
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Task</th>
+            <th>Effort</th>
+            <th>Priority</th>
+            <th>Status</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+
+    <tbody>
+
+        <tr *ngFor="let task of tasks">
+
+            <td>{{task.id}}</td>
+            <td>{{task.task}}</td>
+            <td>{{task.effort}}</td>
+            <td>{{task.priority}}</td>
+            <td>{{task.status}}</td>
+
+            <td>
+
+                <button [routerLink]="['/tasks/edit', task.id]">
+                    Edit
+                </button>
+
+            </td>
+
+        </tr>
+
+    </tbody>
+
+</table>
